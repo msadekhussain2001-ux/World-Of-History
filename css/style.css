@@ -1,3 +1,38 @@
+body {
+  background-color: white;
+}
+
+.original-header {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px black;
+  /* z-index allows the header to stay in front of all other elements and position: fixed keeps it in place */
+}
+
+.world-title {
+  color: white;
+  text-align: center;
+}
+
+.tabs-home {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.tabs-home a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
 
 
