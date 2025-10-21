@@ -11,5 +11,10 @@ body {
   z-index: 10;
   padding: 15px 0;
   box-shadow: 0 2px 5px black;
+} 
+.world-title {
+  color: white;
+  text-align: center;
 }
+
 
