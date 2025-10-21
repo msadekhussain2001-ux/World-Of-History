@@ -32,7 +32,39 @@ body {
   margin: 0 10px;
   border-radius: 5px;
   font-weight: bold;
+} 
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
+
+.image-gallery div {
+  position: relative;
+}
+
+.image-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-gallery p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 90%;
+  /* Centers the text over images */
+}
+
 
 
 
