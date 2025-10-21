@@ -17,3 +17,16 @@ body {
   color: white;
   text-align: center;
 }
+.tabs-home {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+} 
+
+.tabs-home a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
