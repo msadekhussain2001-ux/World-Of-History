@@ -28,6 +28,12 @@ body {
   margin: 0 10px;
   border-radius: 5px;
   font-weight: bold;
+}  
+main{ 
+  padding-top:130px;
+}
+.purchase{  
+ padding:10px;
 }
 footer {
   background-color: black;
