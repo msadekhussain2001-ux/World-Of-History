@@ -306,6 +306,13 @@ footer {
   position: relative;
 }
 
+ffooter {
+  background-color: #111;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
 footer section {
   margin-bottom: 20px;
 }
@@ -316,7 +323,7 @@ footer h2 {
 }
 
 footer p {
-  margin: 5px;
+  margin: 5px 0;
 }
 
 footer a {
@@ -324,4 +331,33 @@ footer a {
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ffcc00;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: gold;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 20px;
 }
