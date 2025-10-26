@@ -94,18 +94,45 @@ body {
 }
 
 .features-home {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  justify-items: center;
+  background: #fafafa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature {
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: scale(1.05);
 }
 
 .features-home img {
-  width: 400px;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-} 
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.features-home button,
+.features-home input[type="submit"] {
+  margin-top: 10px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.features-home button:hover,
+.features-home input[type="submit"]:hover {
+  background: #ffcc00;
+  color: black;
+}
+
 .section-title {
   margin-bottom: 40px;
   font-size: 2rem;
