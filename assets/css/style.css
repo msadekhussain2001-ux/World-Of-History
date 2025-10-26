@@ -105,7 +105,13 @@ body {
   height: 250px;
   object-fit: cover;
   display: block;
+} 
+.section-title {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-align: center;
 }
+
 
 .bronze-age {
   display: flex;
