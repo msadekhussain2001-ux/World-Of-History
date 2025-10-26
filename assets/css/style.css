@@ -118,7 +118,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
 .features-home button,
 .features-home input[type="submit"] {
   margin-top: 10px;
@@ -128,7 +127,7 @@ body {
   padding: 10px 25px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .features-home button:hover,
@@ -136,6 +135,8 @@ body {
   background: #ffcc00;
   color: black;
 }
+
+
 @media (max-width: 768px) {
   .features-home img {
     width: 100%;
