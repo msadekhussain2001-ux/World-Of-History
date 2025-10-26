@@ -1,27 +1,27 @@
 body {
   background-color: white;
 }
+
 .welcome-section {
-  margin-top: 120px; 
+  margin-top: 120px;
   text-align: center;
   padding: 60px 20px;
-} 
+}
 
-.welcome-section h2{  
-  font-size: 2.5 rem; 
-  margin-bottom: 20px; 
+.welcome-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: #222;
-} 
-.welcome-section img{ 
-width: 100%; 
-max-width: 800px; 
-height:auto 
+}
 
-
+.welcome-section img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
 }
 
 .original-header {
-background-color: black; 
+  background-color: black;
   color: white;
   position: fixed;
   top: 0;
@@ -30,7 +30,6 @@ background-color: black;
   z-index: 10;
   padding: 15px 0;
   box-shadow: 0 2px 5px black;
-  /* z-index allows the header to stay in front of all other elements and position: fixed keeps it in place */
 }
 
 .world-title {
@@ -50,7 +49,8 @@ background-color: black;
   margin: 0 10px;
   border-radius: 5px;
   font-weight: bold;
-} 
+}
+
 .image-gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -59,12 +59,11 @@ background-color: black;
 
 .image-gallery div {
   position: relative;
+  min-height: 400px;
 }
 
 .image-gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
+  display: none;
 }
 
 .image-gallery p {
@@ -73,15 +72,27 @@ background-color: black;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: 90%;
-  /* Centers the text over images */
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px 25px;
+  border-radius: 8px;
+  width: 80%;
 }
+
+.image-position1 {
+  background: url('https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144') center/cover fixed;
+}
+
+.image-position2 {
+  background: url('https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987') center/cover fixed;
+}
+
+.image-position3 {
+  background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470') center/cover fixed;
+}
+
 .features-home {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -94,7 +105,8 @@ background-color: black;
   height: 250px;
   object-fit: cover;
   display: block;
-} 
+}
+
 .bronze-age {
   display: flex;
   align-items: center;
@@ -113,14 +125,16 @@ background-color: black;
   width: 200px;
   height: 200px;
   object-fit: cover;
-} 
+}
+
 .newsletter {
   max-width: 500px;
   margin: 40px auto;
   padding: 20px;
   background-color: lightgrey;
   border-radius: 8px;
-} 
+}
+
 .contact-form {
   max-width: 500px;
   margin: 40px auto;
@@ -128,6 +142,7 @@ background-color: black;
   background-color: lightgrey;
   border-radius: 8px;
 }
+
 footer {
   background-color: black;
   color: white;
@@ -155,11 +170,3 @@ footer a {
   margin: 0 10px;
   font-weight: bold;
 }
-
-
-
-
-
-
-
-
