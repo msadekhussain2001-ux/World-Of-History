@@ -1,6 +1,10 @@
 body {
   background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 .original-header {
   background-color: black;
   color: white;
@@ -12,16 +16,17 @@ body {
   padding: 15px 0;
   box-shadow: 0 2px 5px black;
 }
-/* nav tabs still appearing purple; styled header to be black with white text */
+
 .world-title {
   color: white;
   text-align: center;
 }
+
 .tabs-home {
   text-align: center;
   font-size: 30px;
   color: white;
-} 
+}
 
 .tabs-home a {
   text-decoration: none;
@@ -29,61 +34,50 @@ body {
   margin: 0 10px;
   border-radius: 5px;
   font-weight: bold;
-} 
-main{ 
-  margin-top: 100px;
-} 
-  section{  
-    text-align: center; 
-   } 
-   section h2{  
-    color:#111; 
-    font-size: 1.8rem; 
-    } 
-    section p {  
-      font-size:1.1rem ; 
-      max-width: 900px; 
-      margin: 0 auto 20px auto;
-
-    } 
-    video{ 
-      max-width: 800px; 
-      display:block; 
-      margin: 20px auto;
-    } 
-    .border-bottom{  
-      border-bottom: 2px solid #eee !important;
-
-
-    }
-
-
-
-
-footer {
-  background-color: black;
   color: white;
-  padding: 40px 20px;
+}
+
+main {
+  padding-top: 180px; /* clears the fixed header */
+}
+
+section {
   text-align: center;
-  position: relative;
+  margin-bottom: 60px;
 }
 
-footer section {
+section h2 {
+  color: #111;
+  font-size: 1.8rem;
   margin-bottom: 20px;
-}  
-
-footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}  
-
-footer p {
-  margin: 5px;
 }
 
-footer a {
-  color: beige;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
+section p {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
+section img {
+  max-width: 700px;  /* uniform image width */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+video {
+  max-width: 800px; /* larger video display */
+  width: 100%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.border-bottom {
+  border-bottom: 2px solid #eee !important;
+  padding-bottom: 40px;
 }
