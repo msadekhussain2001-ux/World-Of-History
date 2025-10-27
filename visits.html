@@ -3,106 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     
-<link 
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-rel="stylesheet" 
-integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-crossorigin="anonymous">
-
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/visits.css">
     <title>World of History - Visit Us</title>
 </head>
 <body> 
     <header class="original-header">   
-        <div class="header-container"> 
+        <div class="container d-flex justify-content-between align-items-center">
             <a href="index.html">
-                <h1 id="logo" class="world-title">World of History Museum</h1>
-                </a>            <nav class="tabs-home"> 
-                <a href="index.html">Home</a> 
-                <a href="exhibits.html">Exhibits</a> 
-                <a href="visits.html">Visit</a> 
+                <h1 class="world-title">World of History Museum</h1>
+            </a>
+            <nav class="tabs-home">
+                <a href="index.html">Home</a>
+                <a href="exhibits.html">Exhibits</a>
+                <a href="visits.html">Visit</a>
             </nav>
         </div>
     </header> 
-    <main>
-        <section class="purchase"> 
-            <fieldset>
-                <legend><h2>Buy Tickets</h2></legend> 
-                <form action="" method="post">   
-                    <label for="buy-firstname">First Name</label>  
-                    <input type="text">  
-                    <label for="buy-secondname">Surname</label> 
-                    <input type="text">  
-                    <label for="buy-email">Email</label> 
-                    <input type="text">   
-                    <label for="buy-exhibit">Choose an Exhibit</label>  
-                    <select name="exhibit" id="buy-exhibit">
-                        <option value="">Please choose an exhibit</option>  
-                        <option value="tudors">Tudors</option>
-                        <option value="victorians">Victorians</option>
-                        <option value="egyptians">Egyptians</option>
-                        <option value="romans">Romans</option>
-                        <option value="greeks">Greeks</option>  
-                    </select>
-                    <input type="submit" value="pay now">
-                </form>
-            </fieldset>
-        </section>
-        <section>  
-            <p>Make your visit to the World of History Museum truly unforgettable by registering your interest...</p>
-            <fieldset>
-                <legend><h2>Register Your Interest</h2></legend>
-                <form action="">  
-                    <label for="register-firstname">First Name</label> 
-                    <input type="text">  
-                    <label for="register-secondname">Surname</label> 
-                    <input type="text">  
-                    <label for="register-email">Email</label> 
-                    <input type="text">  
-                    <label for="register-event">Event</label> 
-                    <input type="text">  
-                </form>
-            </fieldset>
-        </section>
-        <section> 
-            <fieldset>
-                <legend><h2>Contact & Newsletter</h2></legend>
-                <p>To hear more about the museum sign up to our newsletter which includes:</p> 
-                <ul>  
-                    <li>upcoming exhibits</li> 
-                    <li>free workshops</li> 
-                    <li>behind the scenes content of the museum</li>  
-                    <li>weekly columns from our wonderful curators</li>
-                    <li>chance to win amazing prizes</li> 
-                </ul>   
-                <label for="news-email">Email</label> 
-                <input type="text">
-            </fieldset>
-        </section>
-        <footer>
-            <section> 
-                <div class="visitor-information">
-                    <h2>Visitor Information</h2>
-                    <p>Open daily: 9am – 6pm</p>
-                    <p>World of History Museum<br>
-                       18 Kingsbridge Row<br>
-                       Bloomsbury, London<br>
-                       United Kingdom</p> 
-                </div>
-                <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p> 
-            </section> 
-        
-            <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a> 
-        </footer> 
 
-        <script 
-       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    <main class="container my-5">
+        <section class="purchase mb-5">
+            <fieldset class="p-4 border rounded">
+                <legend class="fs-4 mb-3">Buy Tickets</legend>
+                <form>
+                    <div class="mb-3">
+                        <label for="buy-firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="buy-firstname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="buy-secondname" class="form-label">Surname</label>
+                        <input type="text" class="form-control" id="buy-secondname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="buy-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="buy-email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="buy-exhibit" class="form-label">Choose an Exhibit</label>
+                        <select class="form-select" id="buy-exhibit">
+                            <option value="">Please choose an exhibit</option>
+                            <option value="tudors">Tudors</option>
+                            <option value="victorians">Victorians</option>
+                            <option value="egyptians">Egyptians</option>
+                            <option value="romans">Romans</option>
+                            <option value="greeks">Greeks</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Pay Now</button>
+                </form>
+            </fieldset>
+        </section>
+
+        <section class="register mb-5">
+            <fieldset class="p-4 border rounded">
+                <legend class="fs-4 mb-3">Register Your Interest</legend>
+                <form>
+                    <div class="mb-3">
+                        <label for="register-firstname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="register-firstname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-secondname" class="form-label">Surname</label>
+                        <input type="text" class="form-control" id="register-secondname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="register-email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="register-event" class="form-label">Event</label>
+                        <input type="text" class="form-control" id="register-event">
+                    </div>
+                </form>
+            </fieldset>
+        </section>
+
+        <section class="newsletter mb-5">
+            <fieldset class="p-4 border rounded">
+                <legend class="fs-4 mb-3">Contact & Newsletter</legend>
+                <p>To hear more about the museum sign up to our newsletter which includes:</p>
+                <ul>
+                    <li>Upcoming exhibits</li>
+                    <li>Free workshops</li>
+                    <li>Behind the scenes content of the museum</li>
+                    <li>Weekly columns from our curators</li>
+                    <li>Chance to win amazing prizes</li>
+                </ul>
+                <div class="mb-3">
+                    <label for="news-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="news-email">
+                </div>
+            </fieldset>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container mb-3">
+            <h2 class="fs-5">Visitor Information</h2>
+            <p>Open daily: 9am – 6pm</p>
+            <p>World of History Museum<br>18 Kingsbridge Row<br>Bloomsbury, London<br>United Kingdom</p>
+            <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
+        </div>
+        <div>
+            <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">Facebook</a>
+            <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">Instagram</a>
+            <a href="https://www.twitter.com" target="_blank" class="text-white mx-2">Twitter</a>
+        </div>
+    </footer>
+
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-         crossorigin="anonymous">
-        </script>
-        </body>
-        </html>
-        
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
