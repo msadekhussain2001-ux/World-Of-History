@@ -30,6 +30,32 @@ body {
   border-radius: 5px;
   font-weight: bold;
 } 
+main{ 
+  margin-top: 100px;
+} 
+  section{  
+    text-align: center; 
+   } 
+   section h2{  
+    color:#111; 
+    font-size: 1.8rem; 
+    } 
+    section p {  
+      font-size:1.1rem ; 
+      max-width: 900px; 
+      margin: 0 auto 20px auto;
+
+    } 
+    video{ 
+      max-width: 800px; 
+      display:block; 
+      margin: 20px auto;
+    } 
+    .border-bottom{  
+      border-bottom: 2px solid #eee !important;
+
+
+    }
 
 
 
