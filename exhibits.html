@@ -32,12 +32,20 @@
       border-bottom: 2px solid #ffc107;
     }
 
-    section {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-    }
-    .exhibit-img {
-      margin-bottom: 1.5rem;
+    .exhibit-img, .video-container {
+      width: 100%;
+      max-width: 700px;
+      height: 400px;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #555;
+      background-color: #f0f0f0;
+      text-align: center;
     }
   </style>
 </head>
@@ -58,82 +66,62 @@
   <main class="container my-5">
     <section class="section-exhibit py-4 border-bottom">
       <h2 class="mb-3">Glass and Glory: The Story of the Crystal Palace</h2>
-      <img src="assets/crystalpalace.jpg" alt="Crystal Palace" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Step inside the story of the Crystal Palace, the iconic glass and iron structure originally built for the Great Exhibition of 1851...</p>
 
       <h2 class="mt-5 mb-3">Victoria and Abdul</h2>
-      <img src="assets/victoriaandabdul.jpg" alt="Victoria and Abdul" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Discover the fascinating and unlikely friendship between Queen Victoria and her Indian servant Abdul Karim at the World of History Museum...</p>
 
-      <div class="video-container mb-4">
-        <video controls class="w-100">
-          <source src="assets/victorian-video.mp4" type="video/mp4">
-        </video>
-      </div>
+      <div class="video-container mb-4">Video Placeholder</div>
     </section>
 
     <section class="py-4 border-bottom">
       <h2 class="mb-3">Life of the Dead</h2>
-      <img src="assets/mummy.jpeg" alt="Mummified body" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Step into the fascinating world of ancient Egyptian funerary practices with our Mummification Process exhibit...</p>
 
       <h2 class="mt-5 mb-3">Historical Architecture: The Pyramids</h2>
-      <img src="assets/pyramids.jpeg" alt="Pyramids" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Discover the engineering marvels of ancient Egypt in our How Pyramids Were Built exhibit...</p>
 
-      <div class="video-container mb-4">
-        <video controls class="w-100">
-          <source src="assets/egyptian-video.mp4" type="video/mp4">
-        </video>
-      </div>
+      <div class="video-container mb-4">Video Placeholder</div>
     </section>
 
     <section class="py-4 border-bottom">
       <h2 class="mb-3">Tudors: Life and Death of Elizabeth</h2>
-      <img src="assets/tudors1.jpg" alt="Tudors exhibit" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Step back in time and explore the fascinating world of the Tudors...</p>
 
-      <img src="assets/henry8.jpg" alt="Henry VIII" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <h3 class="mb-2">Beyond Henry</h3>
       <p>Discover the formative years of Henry VIII, one of England’s most famous monarchs...</p>
 
-      <div class="video-container mb-4">
-        <video controls class="w-100">
-          <source src="assets/tudor-video.mp4" type="video/mp4">
-        </video>
-      </div>
+      <div class="video-container mb-4">Video Placeholder</div>
     </section>
 
     <section class="py-4 border-bottom">
       <h2 class="mb-3">Romans</h2>
-      <img src="assets/romans.jpeg" alt="Roman exhibit" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Experience the grandeur of the Roman Empire in our Roman Exhibit...</p>
 
       <h2 class="mt-5 mb-3">Enemies of Rome</h2>
-      <img src="assets/hannibal.jpeg" alt="Hannibal" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Explore the epic battles and rivalries of ancient Rome...</p>
 
-      <div class="video-container mb-4">
-        <video controls class="w-100">
-          <source src="assets/roman-video.mp4" type="video/mp4">
-        </video>
-      </div>
+      <div class="video-container mb-4">Video Placeholder</div>
     </section>
 
     <section class="py-4">
       <h2 class="mb-3">Greeks</h2>
-      <img src="assets/greekstatue.jpeg" alt="Greek statue" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Step into the world of ancient Greece in our Greek Exhibit...</p>
 
       <h2 class="mt-5 mb-3">The Great Minds of Greece</h2>
-      <img src="assets/plato.jpeg" alt="Plato" class="img-fluid rounded mb-3 exhibit-img">
+      <div class="exhibit-img">Image Placeholder</div>
       <p>Explore the ideas that shaped Western thought in our Greek Philosophers exhibit...</p>
 
-      <div class="video-container mb-4">
-        <video controls class="w-100">
-          <source src="assets/greek-video.mp4" type="video/mp4">
-        </video>
-      </div>
+      <div class="video-container mb-4">Video Placeholder</div>
     </section>
   </main>
 
@@ -158,6 +146,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
 
