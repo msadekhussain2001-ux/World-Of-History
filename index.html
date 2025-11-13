@@ -30,7 +30,18 @@
         height: 450px; 
         object-fit: cover; 
         border-radius: 10px; 
-      }
+      } 
+      .nav-link {
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #ffc107;
+      border-bottom: 2px solid #ffc107;
+    }
+    .nav-link.active {
+      color: #ffc107 !important;
+      border-bottom: 2px solid #ffc107;
+    }
     </style>
 </head> 
 
