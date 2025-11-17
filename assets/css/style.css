@@ -1,5 +1,10 @@
 body {
   background-color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .card-title {
+  font-family: 'Playfair Display', serif;
 }
 
 .welcome-section {
@@ -14,47 +19,27 @@ body {
   color: #222;
 }
 
-.welcome-section img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
+.welcome-section p {
+  color: #333;
 }
 
-.original-header {
+header {
   background-color: black;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px black;
 }
 
-.world-title {
-  color: white;
-  text-align: center;
+.nav-link {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.tabs-home {
-  text-align: center;
-  font-size: 30px;
-  color: white;
+.nav-link:hover, .nav-link.active {
+  color: #ffc107;
+  border-bottom: 2px solid #ffc107;
 }
 
-.tabs-home a {
-  text-decoration: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.image-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.carousel-inner img {
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .image-gallery div {
@@ -81,17 +66,9 @@ body {
   width: 80%;
 }
 
-.image-position1 {
-  background: url('https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144') center/cover fixed;
-}
-
-.image-position2 {
-  background: url('https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987') center/cover fixed;
-}
-
-.image-position3 {
-  background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470') center/cover fixed;
-}
+.image-position1 { background: url('https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144') center/cover fixed; }
+.image-position2 { background: url('https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987') center/cover fixed; }
+.image-position3 { background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470') center/cover fixed; }
 
 .features-home {
   background-color: #f5f1e6;
@@ -100,15 +77,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-}
-
-.feature {
-  margin-bottom: 30px;
-  transition: transform 0.3s;
-}
-
-.feature:hover {
-  transform: scale(1.05);
 }
 
 .features-home img {
@@ -137,42 +105,15 @@ body {
   color: black;
 }
 
-@media (max-width: 768px) {
-  .features-home img {
-    width: 100%;
-  }
-
-  .features-home button,
-  .features-home input[type="submit"] {
-    width: 100%;
-    padding: 12px 0;
-  }
-}
-
-.section-title {
-  margin-bottom: 40px;
-  font-size: 2rem;
-  text-align: center;
-}
-
 .bronze-age {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: #f5f1e6;
   color: #222;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   padding: 60px 20px;
-  margin: 40px auto;
   text-align: center;
-}
-
-.bronze-age h2 {
-  color: #111;
-  margin-bottom: 15px;
-}
-
-.bronze-age p {
-  color: #333;
-  margin: 5px 0;
 }
 
 .bronze-btn {
@@ -190,77 +131,36 @@ body {
   color: black;
 }
 
-.newsletter {
+.newsletter, .contact-form {
   max-width: 600px;
   margin: 50px auto;
-  padding: 25px;
-  background-color: #eaeaea;
-  border-radius: 8px;
+  padding: 40px;
+  background-color: #f8f4ef;
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.newsletter h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+.newsletter h2, .contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+  color: #111;
 }
 
-.newsletter label {
+.newsletter label, .contact-form label {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: left;
 }
 
 .newsletter input[type="text"],
-.newsletter input[type="email"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 6px;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-}
-
-.newsletter input[type="submit"] {
-  margin-top: 15px;
-  background: black;
-  color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.newsletter input[type="submit"]:hover {
-  background: #ffcc00;
-  color: black;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 25px;
-  background-color: #eaeaea;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.contact-form h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-
-.contact-form label {
-  display: block;
-  margin-top: 10px;
-  text-align: left;
-}
-
+.newsletter input[type="email"],
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 6px;
+  padding: 10px;
+  margin-top: 8px;
   border: 1px solid #bbb;
   border-radius: 5px;
 }
@@ -269,17 +169,19 @@ body {
   resize: vertical;
 }
 
+.newsletter input[type="submit"],
 .contact-form input[type="submit"] {
-  margin-top: 15px;
+  margin-top: 20px;
   background: black;
   color: white;
   border: none;
-  padding: 10px 25px;
+  padding: 12px 30px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 
+.newsletter input[type="submit"]:hover,
 .contact-form input[type="submit"]:hover {
   background: #ffcc00;
   color: black;
@@ -290,20 +192,6 @@ footer {
   color: white;
   padding: 40px 20px;
   text-align: center;
-  position: relative;
-}
-
-footer section {
-  margin-bottom: 20px;
-}
-
-footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-footer p {
-  margin: 5px 0;
 }
 
 footer a {
@@ -318,28 +206,6 @@ footer a:hover {
   color: #ffcc00;
 }
 
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.social-links a {
-  color: gold;
-  text-decoration: none;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.social-links a:hover {
-  color: white;
-}
-
-.copyright {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 20
 
 
-}
+
