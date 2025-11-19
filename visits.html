@@ -47,11 +47,11 @@
   <main class="container my-5">
     <div class="row g-4">
       <!-- Buy Tickets -->
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
+      <div class="col-md-6 d-flex">
+        <div class="card shadow-sm flex-fill">
+          <div class="card-body d-flex flex-column">
             <h2 class="card-title mb-3">Buy Tickets</h2>
-            <form action="email.html" method="post">
+            <form action="email.html" method="post" class="flex-grow-1">
               <div class="mb-3">
                 <label for="buy-firstname" class="form-label">First Name</label>
                 <input type="text" id="buy-firstname" class="form-control" name="firstname" required>
@@ -73,20 +73,38 @@
                   <option value="egyptians">Egyptians</option>
                   <option value="romans">Romans</option>
                   <option value="greeks">Greeks</option>
+                  <option value="bronze-age">Bronze Age (Free Entry)</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary w-100">Pay Now</button>
+              <div class="mb-3">
+                <label for="buy-quantity" class="form-label">Quantity</label>
+                <select id="buy-quantity" class="form-select" name="quantity" required>
+                  <option value="">Select quantity</option> 
+                  <option value="1">Bronze Age Exhibition Free</option>
+                  <option value="1">1 ticket (£11)</option>
+                  <option value="2">2 tickets (£22)</option>
+                  <option value="3">3 tickets (£33)</option>
+                  <option value="4">4 tickets (£44)</option>
+                  <option value="5">5 tickets (£55)</option>
+                  <option value="6">6 tickets (£66)</option>
+                  <option value="7">7 tickets (£77)</option>
+                  <option value="8">8 tickets (£88)</option>
+                  <option value="9">9 tickets (£99)</option>
+                  <option value="10">10 tickets (£110)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mt-auto">Pay Now</button>
             </form>
           </div>
         </div>
       </div>
   
-      <!-- Register your Interest -->
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
+      <!-- Register Your Interest -->
+      <div class="col-md-6 d-flex">
+        <div class="card shadow-sm flex-fill">
+          <div class="card-body d-flex flex-column">
             <h2 class="card-title mb-3">Register Your Interest</h2>
-            <form action="submitted.html" method="post">
+            <form action="submitted.html" method="post" class="flex-grow-1">
               <div class="mb-3">
                 <label for="register-firstname" class="form-label">First Name</label>
                 <input type="text" id="register-firstname" class="form-control" name="firstname" required>
@@ -101,9 +119,13 @@
               </div>
               <div class="mb-3">
                 <label for="register-event" class="form-label">Event</label>
-                <input type="text" id="register-event" class="form-control" name="event" required>
+                <select id="register-event" class="form-select" name="event" required>
+                  <option value="">Select an event</option>
+                  <option value="night-museum">Night at the Museum</option>
+                  <option value="wedding-event">Wedding/Event</option>
+                </select>
               </div>
-              <button type="submit" class="btn btn-secondary w-100">Register</button>
+              <button type="submit" class="btn btn-secondary w-100 mt-auto">Register</button>
             </form>
           </div>
         </div>
@@ -134,6 +156,7 @@
       </div>
     </div>
   </main>
+  
   
   <!-- Footer -->
   <footer class="bg-dark text-white py-4">
