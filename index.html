@@ -1,251 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-        crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+      crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>World of History - Home</title>
+  <title>World of History - Home</title>
 
-    <style>
-      body {
-        font-family: 'Open Sans', sans-serif; 
-        background-color: #f5f1e6;
-        padding-top: 80px; /* make room for fixed navbar */
-      }
-      h1, h2, h3, h4, h5, h6, .card-title {
-        font-family: 'Playfair Display', serif;
-      }
-      .nav-link {
-        transition: color 0.3s ease, border-bottom 0.3s ease;
-      }
-      .nav-link:hover {
-        color: #ffc107;
-        border-bottom: 2px solid #ffc107;
-      }
-      .nav-link.active {
-        color: #ffc107 !important;
-        border-bottom: 2px solid #ffc107;
-      } 
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-      }
+  <style>
+    /* General Body & Typography */
+    body {
+      font-family: 'Open Sans', sans-serif; 
+      background-color: #f5f1e6;
+      padding-top: 80px; /* room for fixed navbar */
+    }
+    h1, h2, h3, h4, h5, h6, .card-title {
+      font-family: 'Playfair Display', serif;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .nav-link {
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #ffc107;
+      border-bottom: 2px solid #ffc107;
+    }
+    .nav-link.active {
+      color: #ffc107 !important;
+      border-bottom: 2px solid #ffc107;
+    }
 
-      /* Responsive Carousel */
-      .carousel-img {
-        width: 100%;
-        height: auto;
-        max-height: 70vh;
-        object-fit: cover;
-        border-radius: 10px;
-      }
+    /* Carousel */
+    .carousel-img {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-      /* Responsive Gallery */
-      .image-gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        display: block;
-        margin-top: 10px;
-      }
+    /* Image Gallery (Original Full Background) */
+    .image-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .image-gallery div {
+      position: relative;
+      min-height: 400px;
+    }
+    .image-gallery p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 25px;
+      border-radius: 8px;
+      width: 80%;
+    }
+    .image-position1 {
+      background: url('https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144') center/cover fixed;
+    }
+    .image-position2 {
+      background: url('https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987') center/cover fixed;
+    }
+    .image-position3 {
+      background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470') center/cover fixed;
+    }
 
-      /* Features section */
-      .features-home {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin: 40px 0;
-      }
-      .features-home img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-      .features-home button, .features-home input[type="submit"] {
-        margin-top: 10px;
-        width: 100%;
-      }
+    /* Features Section */
+    .features-home {
+      background-color: #f5f1e6;
+      padding: 60px 20px;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .feature {
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+    .feature:hover {
+      transform: scale(1.05);
+    }
+    .features-home img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .features-home button,
+    .features-home input[type="submit"] {
+      margin-top: 10px;
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+    .features-home button:hover,
+    .features-home input[type="submit"]:hover {
+      background: #ffcc00;
+      color: black;
+    }
 
-      /* General sections */
-      .welcome-section, .bronze-age, .newsletter, .contact-form {
-        padding: 20px;
-      }
-      .bronze-btn {
-        background-color: #b87333;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-      }
-    </style>
-</head> 
+    /* Bronze Age Section */
+    .bronze-age {
+      background-color: #f5f1e6;
+      color: #222;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 60px 20px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .bronze-btn {
+      background-color: black;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s, color 0.3s;
+    }
+    .bronze-btn:hover {
+      background-color: #ffcc00;
+      color: black;
+    }
 
+    /* Newsletter & Contact Form */
+    .newsletter, .contact-form {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: #faf5ef;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+    .newsletter h2, .contact-form h2 {
+      font-size: 1.9rem;
+      color: #111;
+      margin-bottom: 24px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+      color: #333;
+    }
+    .form-group textarea {
+      resize: vertical;
+    }
+    .btn.newsletter-btn,
+    .btn.contact-btn {
+      display: inline-block;
+      background-color: #222;
+      color: white;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn.newsletter-btn:hover,
+    .btn.contact-btn:hover {
+      background-color: #d4af37;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      background-color: black;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer a {
+      color: beige;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #ffcc00;
+    }
+  </style>
+</head>
 <body>
-    <header class="bg-dark text-white py-3">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <a href="index.html" class="text-white text-decoration-none mb-3 mb-md-0">
-                <h1 id="logo" class="h3 mb-0">World of History Museum</h1>
-            </a>
-            <nav class="nav">
-                <a href="index.html" class="nav-link text-white">Home</a>
-                <a href="exhibits.html" class="nav-link text-white">Exhibits</a>
-                <a href="visits.html" class="nav-link text-white">Visit</a>
-            </nav>
+
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <a href="index.html" class="text-white text-decoration-none mb-3 mb-md-0">
+        <h1 id="logo" class="h3 mb-0">World of History Museum</h1>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link text-white">Home</a>
+        <a href="exhibits.html" class="nav-link text-white">Exhibits</a>
+        <a href="visits.html" class="nav-link text-white">Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Welcome Section -->
+    <section class="welcome-section container text-center">
+      <h2>Welcome to the World of History Museum</h2>
+      <p>Step back in time and explore the wonders of human history — from ancient civilizations to the modern era. Our museum brings the past to life with engaging exhibits, rare artifacts, and interactive displays for all ages.</p>
+    </section>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide container my-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/museum-1.jpg.avif" class="d-block w-100 carousel-img" alt="Museum pillars interior">
         </div>
-    </header>  
-
-    <main> 
-        <section class="welcome-section container text-center">
-            <h2>Welcome to the World of History Museum</h2>
-            <p>Step back in time and explore the wonders of human history — from ancient civilizations to the modern era. Our museum brings the past to life with engaging exhibits, rare artifacts, and interactive displays for all ages.</p>
-        </section>
-
-        <!-- Carousel -->
-        <div id="carouselExample" class="carousel slide container my-5" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/museum-1.jpg.avif" class="d-block w-100 carousel-img" alt="Museum pillars interior">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/museum-image2.jpg.webp" class="d-block w-100 carousel-img" alt="People inside museum">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/museum-image3.jpg.avif" class="d-block w-100 carousel-img" alt="Person photographing inside museum">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/museum-image4.jpg.avif" class="d-block w-100 carousel-img" alt="Museum gallery with chair">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+        <div class="carousel-item">
+          <img src="assets/new-carousel.jpg.avif" class="d-block w-100 carousel-img" alt="People inside museum">
         </div>
-
-        <!-- Image Gallery -->
-        <section class="image-gallery container my-5">
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4 image-position1">
-                    <p>The World of History Museum brings history to life by showcasing iconic artifacts, reconstructions, and immersive exhibits from multiple eras: Romans, Egyptians, Greeks, Tudors, and Victorians.</p>
-                    <img src="https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144" alt="colosseum" class="gallery-img">
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 image-position2">
-                    <p>Each gallery is carefully themed, providing both educational context and interactive experiences, perfect for families, students, and curious travellers.</p>
-                    <img src="https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987" alt="pantheon" class="gallery-img">
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 image-position3">
-                    <p>Broaden your horizons with our curators and guides and position yourself amongst the best in their fields.</p>
-                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470" alt="gallery" class="gallery-img">
-                </div>
-            </div>
-        </section>  
-
-        <!-- Features Section -->
-        <h2 class="section-title text-center">Explore Our Highlights</h2>
-        <section class="features-home container">
-            <div class="feature">
-                <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&q=80&w=2128" alt="inside museum">
-                <a href="visits.html"><button>Book a Tour</button></a>
-            </div>
-            <div class="feature">
-                <img src="https://images.unsplash.com/photo-1544213456-bc37cb97df74?auto=format&fit=crop&q=80&w=2070" alt="exhibits">
-                <a href="visits.html"><button>Our Exhibits</button></a>
-            </div>
-            <div class="feature">
-                <img src="assets/Museum-NHM.jpg" alt="people sleeping in museum">
-                <input type="submit" value="Stay the Night!">
-            </div>
-            <div class="feature">
-                <img src="assets/venuehire.jpg" alt="venue with a wedding">
-                <input type="submit" value="Hire Now">
-            </div>
-        </section>  
-
-        <!-- Bronze Age Section -->
-        <section class="bronze-age py-5 text-center">
-            <div class="container">
-                <h2 class="mb-3">Life in the Bronze Age</h2>
-                <p class="lead mb-1">Now Open</p>
-                <p class="mb-4">Till Christmas</p>
-                <a href="visits.html" class="btn bronze-btn">Free Entry</a>
-            </div>
-        </section>
-
-        <!-- Newsletter -->
-        <div class="newsletter container">
-            <form action="">
-                <h2>Sign up to our newsletter</h2>
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <button type="submit" class="btn newsletter-btn">Subscribe</button>
-            </form>
+        <div class="carousel-item">
+          <img src="assets/new-carousel-two.jpg.avif" class="d-block w-100 carousel-img" alt="Person photographing inside museum">
         </div>
-        
-        <!-- Contact Form -->
-        <div class="contact-form container my-5">
-            <form action="">
-                <h2>Contact us</h2>
-                <div class="form-group">
-                    <label for="contact-name">Full Name</label>
-                    <input type="text" name="contact-name" id="contact-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-email">Email</label>
-                    <input type="email" name="contact-email" id="contact-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-message">Leave Your Message</label>
-                    <textarea name="contact-message" id="contact-message" rows="10" placeholder="Your message" required></textarea>
-                </div>
-                <button type="submit" class="btn contact-btn">Send Message</button>
-            </form>
+        <div class="carousel-item">
+          <img src="assets/new-carousel-three.jpg.avif" class="d-block w-100 carousel-img" alt="Museum gallery with chair">
         </div>
-        
-        <!-- Footer -->
-        <footer class="container my-5">
-            <section>
-                <div class="visitor-information">
-                    <h2>Visitor Information</h2>
-                    <p>Open daily: 9am – 6pm</p>
-                    <p>World of History Museum<br>
-                       18 Kingsbridge Row<br>
-                       Bloomsbury, London<br>
-                       United Kingdom</p>
-                </div>
-                <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
-            </section>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
-        </footer> 
-    </main>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-    <script 
-       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-       crossorigin="anonymous">
-    </script>
+    <!-- Image Gallery -->
+    <section class="image-gallery">
+      <div class="image-position1">
+        <p>The World of History Museum brings history to life by showcasing iconic artifacts, reconstructions, and immersive exhibits from multiple eras: Romans, Egyptians, Greeks, Tudors, and Victorians.</p>
+      </div>
+      <div class="image-position2">
+        <p>Each gallery is carefully themed, providing both educational context and interactive experiences, perfect for families, students, and curious travellers.</p>
+      </div>
+      <div class="image-position3">
+        <p>Broaden your horizons with our curators and guides and position yourself amongst the best in their fields.</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <h2 class="section-title text-center">Explore Our Highlights</h2>
+    <section class="features-home container">
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&q=80&w=2128" alt="inside museum">
+        <a href="visits.html"><button>Book a Tour</button></a>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1544213456-bc37cb97df74?auto=format&fit=crop&q=80&w=2070" alt="exhibits">
+        <a href="visits.html"><button>Our Exhibits</button></a>
+      </div>
+      <div class="feature">
+        <img src="assets/Museum-NHM.jpg" alt="people sleeping in museum">
+        <input type="submit" value="Stay the Night!">
+      </div>
+      <div class="feature">
+        <img src="assets/venuehire.jpg" alt="venue with a wedding">
+        <input type="submit" value="Hire Now">
+      </div>
+    </section>
+
+    <!-- Bronze Age Section -->
+    <section class="bronze-age py-5 text-center">
+      <div class="container">
+        <h2 class="mb-3">Life in the Bronze Age</h2>
+        <p class="lead mb-1">Now Open</p>
+        <p class="mb-4">Till Christmas</p>
+        <a href="visits.html" class="btn bronze-btn">Free Entry</a>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <div class="newsletter container">
+      <form action="">
+        <h2>Sign up to our newsletter</h2>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <button type="submit" class="btn newsletter-btn">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form container my-5">
+      <form action="">
+        <h2>Contact us</h2>
+        <div class="form-group">
+          <label for="contact-name">Full Name</label>
+          <input type="text" name="contact-name" id="contact-name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" name="contact-email" id="contact-email" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Leave Your Message</label>
+          <textarea name="contact-message" id="contact-message" rows="10" placeholder="Your message" required></textarea>
+        </div>
+        <button type="submit" class="btn contact-btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container my-5">
+      <section>
+        <div class="visitor-information">
+          <h2>Visitor Information</h2>
+          <p>Open daily: 9am – 6pm</p>
+          <p>World of History Museum<br>
+             18 Kingsbridge Row<br>
+             Bloomsbury, London<br>
+             United Kingdom</p>
+        </div>
+        <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
+      </section>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
+    </footer>
+  </main>
+
+  <script 
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+     crossorigin="anonymous">
+  </script>
 </body>
 </html>
