@@ -19,19 +19,11 @@
       body {
         font-family: 'Open Sans', sans-serif; 
         background-color: #f5f1e6;
+        padding-top: 80px; /* make room for fixed navbar */
       }
       h1, h2, h3, h4, h5, h6, .card-title {
         font-family: 'Playfair Display', serif;
       }
-      #carouselExample {
-        max-width: 100%;
-        margin: 20px auto;
-      }
-      #carouselExample img {
-        height: 450px; 
-        object-fit: cover; 
-        border-radius: 10px; 
-      } 
       .nav-link {
         transition: color 0.3s ease, border-bottom 0.3s ease;
       }
@@ -43,6 +35,60 @@
         color: #ffc107 !important;
         border-bottom: 2px solid #ffc107;
       } 
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      /* Responsive Carousel */
+      .carousel-img {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      /* Responsive Gallery */
+      .image-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        margin-top: 10px;
+      }
+
+      /* Features section */
+      .features-home {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+      }
+      .features-home img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      .features-home button, .features-home input[type="submit"] {
+        margin-top: 10px;
+        width: 100%;
+      }
+
+      /* General sections */
+      .welcome-section, .bronze-age, .newsletter, .contact-form {
+        padding: 20px;
+      }
+      .bronze-btn {
+        background-color: #b87333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
     </style>
 </head> 
 
@@ -61,25 +107,25 @@
     </header>  
 
     <main> 
-        <br>
-        <section class="welcome-section">
+        <section class="welcome-section container text-center">
             <h2>Welcome to the World of History Museum</h2>
             <p>Step back in time and explore the wonders of human history — from ancient civilizations to the modern era. Our museum brings the past to life with engaging exhibits, rare artifacts, and interactive displays for all ages.</p>
         </section>
 
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel -->
+        <div id="carouselExample" class="carousel slide container my-5" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/museum-1.jpg.avif"class="d-block w-100" alt="Museum pillars interior">
+                <img src="assets/museum-1.jpg.avif" class="d-block w-100 carousel-img" alt="Museum pillars interior">
               </div>
               <div class="carousel-item">
-                <img src= "assets/museum-image2.jpg.webp" class="d-block w-100" alt="People inside museum">
+                <img src="assets/museum-image2.jpg.webp" class="d-block w-100 carousel-img" alt="People inside museum">
               </div>
               <div class="carousel-item">
-                <img src="assets/museum-image3.jpg.avif" class="d-block w-100" alt="Person photographing inside museum">
+                <img src="assets/museum-image3.jpg.avif" class="d-block w-100 carousel-img" alt="Person photographing inside museum">
               </div>
               <div class="carousel-item">
-                <img src="assets/museum-image4.jpg.avif" class="d-block w-100" alt="Museum gallery with chair">
+                <img src="assets/museum-image4.jpg.avif" class="d-block w-100 carousel-img" alt="Museum gallery with chair">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -90,29 +136,29 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
-          
-          
-          
+        </div>
 
-        
-        <section class="image-gallery">
-            <div class="image-position1">
-                <p>The World of History Museum brings history to life by showcasing iconic artifacts, reconstructions, and immersive exhibits from multiple eras: Romans, Egyptians, Greeks, Tudors, and Victorians.</p>
-                <img src="https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144" alt="colosseum">
-            </div>
-            <div class="image-position2">
-                <p>Each gallery is carefully themed, providing both educational context and interactive experiences, perfect for families, students, and curious travellers.</p>
-                <img src="https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987" alt="pantheon">
-            </div>
-            <div class="image-position3">
-                <p>Broaden your horizons with our curators and guides and position yourself amongst the best in their fields.</p>
-                <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470" alt="gallery">
+        <!-- Image Gallery -->
+        <section class="image-gallery container my-5">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4 image-position1">
+                    <p>The World of History Museum brings history to life by showcasing iconic artifacts, reconstructions, and immersive exhibits from multiple eras: Romans, Egyptians, Greeks, Tudors, and Victorians.</p>
+                    <img src="https://plus.unsplash.com/premium_photo-1661963952208-2db3512ef3de?auto=format&fit=crop&q=80&w=2144" alt="colosseum" class="gallery-img">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 image-position2">
+                    <p>Each gallery is carefully themed, providing both educational context and interactive experiences, perfect for families, students, and curious travellers.</p>
+                    <img src="https://images.unsplash.com/photo-1594026200204-a25bea256816?auto=format&fit=crop&q=80&w=987" alt="pantheon" class="gallery-img">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 image-position3">
+                    <p>Broaden your horizons with our curators and guides and position yourself amongst the best in their fields.</p>
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470" alt="gallery" class="gallery-img">
+                </div>
             </div>
         </section>  
 
-        <h2 class="section-title">Explore Our Highlights</h2>
-        <section class="features-home">
+        <!-- Features Section -->
+        <h2 class="section-title text-center">Explore Our Highlights</h2>
+        <section class="features-home container">
             <div class="feature">
                 <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&q=80&w=2128" alt="inside museum">
                 <a href="visits.html"><button>Book a Tour</button></a>
@@ -131,6 +177,7 @@
             </div>
         </section>  
 
+        <!-- Bronze Age Section -->
         <section class="bronze-age py-5 text-center">
             <div class="container">
                 <h2 class="mb-3">Life in the Bronze Age</h2>
@@ -139,7 +186,9 @@
                 <a href="visits.html" class="btn bronze-btn">Free Entry</a>
             </div>
         </section>
-        <div class="newsletter">
+
+        <!-- Newsletter -->
+        <div class="newsletter container">
             <form action="">
                 <h2>Sign up to our newsletter</h2>
                 <div class="form-group">
@@ -154,7 +203,8 @@
             </form>
         </div>
         
-        <div class="contact-form">
+        <!-- Contact Form -->
+        <div class="contact-form container my-5">
             <form action="">
                 <h2>Contact us</h2>
                 <div class="form-group">
@@ -173,8 +223,8 @@
             </form>
         </div>
         
-        
-        <footer>
+        <!-- Footer -->
+        <footer class="container my-5">
             <section>
                 <div class="visitor-information">
                     <h2>Visitor Information</h2>
