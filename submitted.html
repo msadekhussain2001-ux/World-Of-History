@@ -18,7 +18,7 @@
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #f5f1e6;
-      padding-top: 80px; /* room for fixed navbar */
+      padding-top: 80px;
       color: #222;
       text-align: center;
     }
@@ -52,28 +52,31 @@
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
+
     footer {
-      background-color: black;
-      color: white;
-      padding: 40px 20px;
+      background-color: black !important;
+      color: white !important;
+      padding: 20px 0 !important;
       text-align: center;
       margin-top: 100px;
     }
+    footer * {
+      color: white !important;
+    }
     footer a {
-      color: beige;
+      color: beige !important;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
       transition: color 0.3s;
     }
     footer a:hover {
-      color: #ffcc00;
+      color: #ffcc00 !important;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header class="bg-dark text-white py-3">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
       <a href="index.html" class="text-white text-decoration-none mb-3 mb-md-0">
@@ -87,7 +90,6 @@
     </div>
   </header>
 
-  <!-- Thank You Message -->
   <main>
     <div class="thank-you-message">
       <h2>Thank you!</h2>
@@ -96,8 +98,7 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
+  <footer class="container my-5">
     <section>
       <div class="visitor-information">
         <h2>Visitor Information</h2>
@@ -109,6 +110,7 @@
       </div>
       <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
     </section>
+
     <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
     <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>

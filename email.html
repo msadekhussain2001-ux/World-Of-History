@@ -55,26 +55,31 @@
       font-size: 1.3rem;
       color: #333;
     }
+
     footer {
-      background-color: #222;
-      color: white;
-      padding: 40px 20px;
+      background-color: black !important;
+      color: white !important;
+      padding: 20px 0 !important;
       text-align: center;
       margin-top: 60px;
     }
+    footer * {
+      color: white !important;
+    }
     footer a {
-      color: beige;
+      color: beige !important;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
+      transition: color 0.3s;
     }
     footer a:hover {
-      color: #ffc107;
+      color: #ffcc00 !important;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header class="text-white">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
       <a href="index.html"><h1 class="h3 mb-0">World of History Museum</h1></a>
@@ -86,28 +91,27 @@
     </div>
   </header>
 
-  <!-- Thank You Message -->
   <div class="thank-you-message">
     <h2>Thank You for Your Purchase!</h2>
     <p>A payment link has been sent to your email. Please follow the instructions to complete your booking.</p>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="visitor-information mb-3">
-      <h2>Visitor Information</h2>
-      <p>Open daily: 9am – 6pm</p>
-      <p>World of History Museum<br>
-         18 Kingsbridge Row<br>
-         Bloomsbury, London<br>
-         United Kingdom</p>
-    </div>
-    <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
-    <div class="social-links mt-3">
-      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
-    </div>
+  <footer class="container my-5">
+    <section>
+      <div class="visitor-information">
+        <h2>Visitor Information</h2>
+        <p>Open daily: 9am – 6pm</p>
+        <p>World of History Museum<br>
+           18 Kingsbridge Row<br>
+           Bloomsbury, London<br>
+           United Kingdom</p>
+      </div>
+      <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
+    </section>
+
+    <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
   </footer>
 
   <script 

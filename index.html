@@ -15,11 +15,10 @@
   <title>World of History - Home</title>
 
   <style>
-    /* General Body & Typography */
     body {
       font-family: 'Open Sans', sans-serif; 
       background-color: #f5f1e6;
-      padding-top: 80px; /* room for fixed navbar */
+      padding-top: 80px;
     }
     h1, h2, h3, h4, h5, h6, .card-title {
       font-family: 'Playfair Display', serif;
@@ -43,7 +42,6 @@
       border-bottom: 2px solid #ffc107;
     }
 
-    /* Carousel */
     .carousel-img {
       width: 100%;
       height: auto;
@@ -52,7 +50,6 @@
       border-radius: 10px;
     }
 
-    /* Image Gallery (Original Full Background) */
     .image-gallery {
       display: grid;
       grid-template-columns: 1fr;
@@ -86,7 +83,6 @@
       background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1470') center/cover fixed;
     }
 
-    /* Features Section */
     .features-home {
       background-color: #f5f1e6;
       padding: 60px 20px;
@@ -109,8 +105,7 @@
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-    .features-home button,
-    .features-home input[type="submit"] {
+    .features-home button {
       margin-top: 10px;
       background: black;
       color: white;
@@ -120,13 +115,11 @@
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
     }
-    .features-home button:hover,
-    .features-home input[type="submit"]:hover {
+    .features-home button:hover {
       background: #ffcc00;
       color: black;
     }
 
-    /* Bronze Age Section */
     .bronze-age {
       background-color: #f5f1e6;
       color: #222;
@@ -150,7 +143,6 @@
       color: black;
     }
 
-    /* Newsletter & Contact Form */
     .newsletter, .contact-form {
       max-width: 600px;
       margin: 60px auto;
@@ -159,37 +151,9 @@
       border-radius: 10px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
-    .newsletter h2, .contact-form h2 {
-      font-size: 1.9rem;
-      color: #111;
-      margin-bottom: 24px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-      text-align: left;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      color: #333;
-      font-weight: 500;
-    }
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-family: inherit;
-      font-size: 1rem;
-      color: #333;
-    }
-    .form-group textarea {
-      resize: vertical;
-    }
+
     .btn.newsletter-btn,
     .btn.contact-btn {
-      display: inline-block;
       background-color: #222;
       color: white;
       padding: 14px 36px;
@@ -205,7 +169,6 @@
       color: #222;
     }
 
-    /* Footer */
     footer {
       background-color: black;
       color: white;
@@ -217,11 +180,24 @@
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
-      transition: color 0.3s;
     }
     footer a:hover {
       color: #ffcc00;
     }
+
+    /* MOBILE FIX FOR HIDDEN TITLE */
+    @media (max-width: 768px) {
+      .welcome-section {
+        padding-top: 120px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .welcome-section {
+        padding-top: 150px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -240,120 +216,109 @@
   </header>
 
   <main>
-    <!-- Welcome Section -->
     <section class="welcome-section container text-center">
       <h2>Welcome to the World of History Museum</h2>
-      <p>Step back in time and explore the wonders of human history — from ancient civilizations to the modern era. Our museum brings the past to life with engaging exhibits, rare artifacts, and interactive displays for all ages.</p>
+      <p>Step back in time and explore the wonders of human history...</p>
     </section>
 
-    <!-- Carousel -->
     <div id="carouselExample" class="carousel slide container my-5" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/museum-1.jpg.avif" class="d-block w-100 carousel-img" alt="Museum pillars interior">
+          <img src="assets/museum-1.jpg.avif" class="d-block w-100 carousel-img">
         </div>
         <div class="carousel-item">
-          <img src="assets/new-carousel.jpg.avif" class="d-block w-100 carousel-img" alt="People inside museum">
+          <img src="assets/new-carousel.jpg.avif" class="d-block w-100 carousel-img">
         </div>
         <div class="carousel-item">
-          <img src="assets/new-carousel-two.jpg.avif" class="d-block w-100 carousel-img" alt="Person photographing inside museum">
+          <img src="assets/new-carousel-two.jpg.avif" class="d-block w-100 carousel-img">
         </div>
         <div class="carousel-item">
-          <img src="assets/new-carousel-three.jpg.avif" class="d-block w-100 carousel-img" alt="Museum gallery with chair">
+          <img src="assets/new-carousel-three.jpg.avif" class="d-block w-100 carousel-img">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <span class="carousel-control-prev-icon"></span>
       </button>
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <span class="carousel-control-next-icon"></span>
       </button>
     </div>
 
-    <!-- Image Gallery -->
     <section class="image-gallery">
       <div class="image-position1">
-        <p>The World of History Museum brings history to life by showcasing iconic artifacts, reconstructions, and immersive exhibits from multiple eras: Romans, Egyptians, Greeks, Tudors, and Victorians.</p>
+        <p>The World of History Museum brings history to life...</p>
       </div>
       <div class="image-position2">
-        <p>Each gallery is carefully themed, providing both educational context and interactive experiences, perfect for families, students, and curious travellers.</p>
+        <p>Each gallery is carefully themed...</p>
       </div>
       <div class="image-position3">
-        <p>Broaden your horizons with our curators and guides and position yourself amongst the best in their fields.</p>
+        <p>Broaden your horizons...</p>
       </div>
     </section>
 
-    <!-- Features Section -->
-<h2 class="section-title text-center">Explore Our Highlights</h2>
-<section class="features-home container">
-  <div class="feature">
-    <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&q=80&w=2128" alt="inside museum">
-    <a href="visits.html"><button>Book a Tour</button></a>
-  </div>
-  <div class="feature">
-    <img src="https://images.unsplash.com/photo-1544213456-bc37cb97df74?auto=format&fit=crop&q=80&w=2070" alt="exhibits">
-    <a href="visits.html"><button>Our Exhibits</button></a>
-  </div>
-  <div class="feature">
-    <img src="assets/Museum-NHM.jpg" alt="people sleeping in museum">
-    <a href="visits.html"><button>Stay the Night!</button></a>
-  </div>
-  <div class="feature">
-    <img src="assets/venuehire.jpg" alt="venue with a wedding">
-    <a href="visits.html"><button>Hire Now</button></a>
-  </div>
-</section>
+    <h2 class="section-title text-center">Explore Our Highlights</h2>
+    <section class="features-home container">
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?auto=format&fit=crop&q=80&w=2128">
+        <a href="visits.html"><button>Book a Tour</button></a>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1544213456-bc37cb97df74?auto=format&fit=crop&q=80&w=2070">
+        <a href="visits.html"><button>Our Exhibits</button></a>
+      </div>
+      <div class="feature">
+        <img src="assets/Museum-NHM.jpg">
+        <a href="visits.html"><button>Stay the Night!</button></a>
+      </div>
+      <div class="feature">
+        <img src="assets/venuehire.jpg">
+        <a href="visits.html"><button>Hire Now</button></a>
+      </div>
+    </section>
 
-
-    <!-- Bronze Age Section -->
     <section class="bronze-age py-5 text-center">
       <div class="container">
-        <h2 class="mb-3">Life in the Bronze Age</h2>
+        <h2>Life in the Bronze Age</h2>
         <p class="lead mb-1">Now Open</p>
         <p class="mb-4">Till Christmas</p>
         <a href="visits.html" class="btn bronze-btn">Free Entry</a>
       </div>
     </section>
 
-    <!-- Newsletter -->
-<div class="newsletter container">
-  <form action="submitted.html" method="post">
-    <h2>Sign up to our newsletter</h2>
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input type="text" name="name" id="name" required>
+    <div class="newsletter container">
+      <form action="submitted.html" method="post">
+        <h2>Sign up to our newsletter</h2>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+        <button type="submit" class="btn newsletter-btn">Subscribe</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
-    </div>
-    <button type="submit" class="btn newsletter-btn">Subscribe</button>
-  </form>
-</div>
 
-<!-- Contact Form -->
-<div class="contact-form container my-5">
-  <form action="submitted.html" method="post">
-    <h2>Contact us</h2>
-    <div class="form-group">
-      <label for="contact-name">Full Name</label>
-      <input type="text" name="contact-name" id="contact-name" required>
+    <div class="contact-form container my-5">
+      <form action="submitted.html" method="post">
+        <h2>Contact us</h2>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" required>
+        </div>
+        <div class="form-group">
+          <label>Leave Your Message</label>
+          <textarea rows="10" required></textarea>
+        </div>
+        <button type="submit" class="btn contact-btn">Send Message</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="contact-email">Email</label>
-      <input type="email" name="contact-email" id="contact-email" required>
-    </div>
-    <div class="form-group">
-      <label for="contact-message">Leave Your Message</label>
-      <textarea name="contact-message" id="contact-message" rows="10" placeholder="Your message" required></textarea>
-    </div>
-    <button type="submit" class="btn contact-btn">Send Message</button>
-  </form>
-</div>
 
-    <!-- Footer -->
     <footer class="container my-5">
       <section>
         <div class="visitor-information">
@@ -366,16 +331,13 @@
         </div>
         <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
       </section>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.twitter.com" target="_blank">Twitter</a>
     </footer>
   </main>
 
-  <script 
-     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-     crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
