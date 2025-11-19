@@ -36,17 +36,16 @@
     .exhibit-img, .video-container {
       width: 100%;
       max-width: 700px;
-      height: 400px;
       margin: 20px auto;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      color: #555;
-      background-color: #f0f0f0;
-      text-align: center;
+      display: block;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .video-container {
+      max-width: 700px;
     }
   </style>
 </head>
@@ -67,62 +66,77 @@
   <main class="container my-5">
     <section class="section-exhibit py-4 border-bottom">
       <h2 class="mb-3">Glass and Glory: The Story of the Crystal Palace</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Step inside the story of the Crystal Palace, the iconic glass and iron structure originally built for the Great Exhibition of 1851...</p>
+      <img src="assets/crystalpalace.jpg" alt="Crystal Palace interior" class="exhibit-img">
+      <p>The Crystal Palace, built in 1851 for the Great Exhibition, was a marvel of Victorian engineering. Its intricate iron framework and vast glass panels symbolized the era’s technological advancements and ambition. Visitors could wander through expansive halls filled with exhibits from all over the world, experiencing culture, science, and art in a way that had never been seen before. The structure became a cultural icon, inspiring architectural innovation and captivating the imagination of millions who visited it in its heyday. Today, the exhibit highlights the craftsmanship, the innovative design techniques, and the global impact the Crystal Palace had on architecture and public exhibitions.</p>
 
       <h2 class="mt-5 mb-3">Victoria and Abdul</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Discover the fascinating and unlikely friendship between Queen Victoria and her Indian servant Abdul Karim at the World of History Museum...</p>
+      <img src="assets/victoriaandabdul.jpg" alt="Victoria and Abdul exhibit" class="exhibit-img">
+      <p>The Victoria and Abdul exhibit explores the remarkable friendship between Queen Victoria and Abdul Karim, her Indian servant and confidant. Through letters, photographs, and personal artifacts, the exhibit reveals the depth of trust and companionship that transcended social and cultural barriers. Visitors gain insight into the private life of the Queen, the influence Abdul had on her final decades, and the subtle but significant cultural exchanges that occurred as a result. The exhibit portrays not only their friendship but also the broader historical context of British colonialism and the lives of individuals navigating complex social hierarchies.</p>
 
-      <div class="video-container mb-4">Video Placeholder</div>
+      <video class="video-container mb-4" controls>
+        <source src="assets/exhibit-video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <section class="py-4 border-bottom">
       <h2 class="mb-3">Life of the Dead</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Step into the fascinating world of ancient Egyptian funerary practices with our Mummification Process exhibit...</p>
+      <img src="assets/mummy.jpeg" alt="Mummification exhibit" class="exhibit-img">
+      <p>Step into the fascinating world of ancient Egyptian funerary practices with our Mummification Process exhibit. This display examines the rituals, beliefs, and techniques used to prepare the dead for the afterlife. Through authentic artifacts, hieroglyphic inscriptions, and carefully reconstructed models, visitors gain an understanding of how ancient Egyptians viewed death and immortality. The exhibit delves into the symbolism behind amulets, coffins, and funerary masks, creating an immersive educational experience that reveals the spiritual and cultural importance of these practices.</p>
 
       <h2 class="mt-5 mb-3">Historical Architecture: The Pyramids</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Discover the engineering marvels of ancient Egypt in our How Pyramids Were Built exhibit...</p>
+      <img src="assets/pyramids.jpeg" alt="Pyramids exhibit" class="exhibit-img">
+      <p>The How Pyramids Were Built exhibit showcases the incredible engineering feats of ancient Egypt. Visitors can explore the methods, tools, and manpower required to construct these monumental structures. Through interactive models, diagrams, and multimedia displays, the exhibit explains how precise alignment, massive stone blocks, and innovative techniques allowed ancient builders to achieve architectural perfection. The exhibit emphasizes the ingenuity, determination, and cultural significance of the pyramids, providing a vivid understanding of one of the world’s most enduring wonders.</p>
 
-      <div class="video-container mb-4">Video Placeholder</div>
+      <video class="video-container mb-4" controls>
+        <source src="assets/exhibit-video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <section class="py-4 border-bottom">
       <h2 class="mb-3">Tudors: Life and Death of Elizabeth</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Step back in time and explore the fascinating world of the Tudors...</p>
+      <img src="assets/tudors1.jpg" alt="Tudors exhibit" class="exhibit-img">
+      <p>Step back in time to the Tudor era, exploring the life and reign of Elizabeth I. The exhibit features portraits, artifacts, and interactive displays that showcase Elizabeth’s political skill, personal style, and the challenges she faced in a male-dominated society. Visitors can understand the complex web of alliances, rebellions, and diplomatic maneuvers that defined her rule, as well as the culture, fashion, and daily life of her subjects.</p>
 
-      <div class="exhibit-img">Image Placeholder</div>
+      <img src="assets/henry-new.jpeg.webp" alt="Young Henry VIII" class="exhibit-img">
       <h3 class="mb-2">Beyond Henry</h3>
-      <p>Discover the formative years of Henry VIII, one of England’s most famous monarchs...</p>
+      <p>This section focuses on the formative years of Henry VIII, highlighting his education, interests, and early experiences that shaped his later reign. From his athletic prowess to his cultural pursuits, visitors gain insight into the personality, ambitions, and decision-making that made him one of England’s most famous and controversial monarchs. Authentic artifacts, portraits, and manuscripts provide a glimpse into the Tudor court and the world that molded Henry VIII.</p>
 
-      <div class="video-container mb-4">Video Placeholder</div>
+      <video class="video-container mb-4" controls>
+        <source src="assets/exhibit-video3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <section class="py-4 border-bottom">
       <h2 class="mb-3">Romans</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Experience the grandeur of the Roman Empire in our Roman Exhibit...</p>
+      <img src="assets/roman-warrior.jpeg.avif" alt="Romans exhibit" class="exhibit-img">
+      <p>Experience the grandeur of the Roman Empire with displays of armor, weaponry, daily life, and art. The Romans section explores military strategy, political governance, and cultural influence throughout Europe. Visitors can interact with reconstructions of Roman streets, villas, and public spaces, gaining an appreciation for the complexity and legacy of Roman civilization. Every artifact tells a story of power, innovation, and the human experience within the empire.</p>
 
       <h2 class="mt-5 mb-3">Enemies of Rome</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Explore the epic battles and rivalries of ancient Rome...</p>
+      <img src="assets/roman-enemy.jpeg.avif" alt="Enemies of Rome" class="exhibit-img">
+      <p>This exhibit examines Rome’s adversaries and the epic battles that shaped the empire’s history. Through detailed maps, weapon replicas, and narrative displays, visitors can learn about famous leaders, strategic conflicts, and the resilience of civilizations that challenged Rome. It highlights both military prowess and cultural exchange, illustrating how Rome’s enemies influenced its evolution and the broader historical narrative of the ancient world.</p>
 
-      <div class="video-container mb-4">Video Placeholder</div>
+      <video class="video-container mb-4" controls>
+        <source src="assets/exhibit-video4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
 
     <section class="py-4">
       <h2 class="mb-3">Greeks</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Step into the world of ancient Greece in our Greek Exhibit...</p>
+      <img src="assets/greek-new.jpeg.avif" alt="Greek exhibit" class="exhibit-img">
+      <p>Step into the world of ancient Greece with exhibits exploring politics, philosophy, art, and daily life. Visitors can learn about city-states like Athens and Sparta, the roles of citizens, and the influence of Greek culture on the modern world. The Greek exhibit showcases sculptures, pottery, and other artifacts that tell stories of mythology, innovation, and societal structure.</p>
 
       <h2 class="mt-5 mb-3">The Great Minds of Greece</h2>
-      <div class="exhibit-img">Image Placeholder</div>
-      <p>Explore the ideas that shaped Western thought in our Greek Philosophers exhibit...</p>
+      <img src="assets/plato-new.jpeg.avif" alt="Greek philosophers exhibit" class="exhibit-img">
+      <p>The Greek Philosophers exhibit celebrates the thinkers whose ideas shaped Western civilization. Visitors can explore the contributions of Socrates, Plato, Aristotle, and other influential minds, examining their writings, teaching methods, and lasting legacy. Through interactive displays and educational materials, the exhibit demonstrates how Greek philosophy continues to impact modern thought, ethics, politics, and science.</p>
 
-      <div class="video-container mb-4">Video Placeholder</div>
+      <video class="video-container mb-4" controls>
+        <source src="assets/exhibit-video5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </section>
   </main>
 
@@ -147,4 +161,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
