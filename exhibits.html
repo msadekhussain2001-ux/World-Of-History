@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="assets/css/exhibits.css" />
   <title>World of History - Exhibits</title>
 
   <style>
@@ -15,9 +14,6 @@
       background-color: #f5f1e6;
     }
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
-    }
-    .card-title {
       font-family: 'Playfair Display', serif;
     }
     .nav-link {
@@ -36,10 +32,9 @@
       max-width: 700px;
       margin: 20px auto;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       display: block;
     }
-    iframe {
+    iframe, video {
       width: 100%;
       max-width: 700px;
       height: 400px;
@@ -49,23 +44,16 @@
       border: none;
     }
     footer {
-      background-color: black !important;
-      color: white !important;
-      padding: 20px 0 !important; 
+      background-color: black;
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
-    footer * {
-      color: white !important;
-    }
     footer a {
-      color: beige !important;
+      color: beige;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
-      transition: color 0.3s;
-    }
-    footer a:hover {
-      color: #ffcc00 !important;
     }
   </style>
 </head>
@@ -85,84 +73,67 @@
 
   <main class="container my-5">
 
-    <!-- 1 Crystal Palace -->
-    <section class="section-exhibit py-4 border-bottom">
-      <h2 class="mb-3">Glass and Glory: The Story of the Crystal Palace</h2>
+    <section class="py-4 border-bottom">
+      <h2>Glass and Glory: The Story of the Crystal Palace</h2>
       <img src="assets/crystalpalace.jpg" class="exhibit-img">
-      <p>The Crystal Palace, built in 1851 for the Great Exhibition...</p>
-      <iframe src="https://www.youtube.com/embed/MOIsenLDU9o" allowfullscreen></iframe>
+      <p>The Crystal Palace, constructed for the Great Exhibition of 1851, showcased Victorian engineering at its peak. Through large-scale models, original sketches, and surviving artifacts, this exhibit explores how Joseph Paxton’s revolutionary glass-and-iron structure transformed architecture, industry, and global exhibitions. Visitors can walk through immersive displays that recreate the atmosphere of the Great Exhibition, offering insights into the innovations and international cultural exchange it inspired.</p>
+      <video src="assets/clip-one.mp4" controls></video>
     </section>
 
-    <!-- 2 Victoria and Abdul -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Victoria and Abdul</h2>
+      <h2>Victoria and Abdul</h2>
       <img src="assets/victoriaandabdul.jpg" class="exhibit-img">
-      <p>The Victoria and Abdul exhibit explores the remarkable friendship...</p>
-      <iframe src="https://www.youtube.com/embed/bTOKKFJy1pU" allowfullscreen></iframe>
+      <p>This exhibit highlights the unlikely yet influential friendship between Queen Victoria and Abdul Karim. Through personal letters, rare photographs, and recreated scenes from the royal household, visitors gain a deeper look at how Karim shaped the Queen’s worldview. Explore themes of empire, loyalty, and cultural identity, and uncover how their relationship challenged expectations within the royal court.</p>
     </section>
 
-    <!-- 3 Life of the Dead -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Life of the Dead</h2>
+      <h2>Life of the Dead</h2>
       <img src="assets/mummy.jpeg" class="exhibit-img">
-      <p>Step into the fascinating world of ancient Egyptian funerary practices...</p>
-      <iframe src="https://www.youtube.com/embed/tL4skxNrVAk" allowfullscreen></iframe>
+      <p>Discover the spiritual world of ancient Egypt by examining authentic funerary objects, amulets, sarcophagus replicas, and detailed reconstructions of burial rituals. This exhibit reveals the symbolism behind mummification, the journey through the afterlife, and the ceremonies designed to honor and protect the dead. Visitors can explore interactive displays explaining how ancient Egyptians viewed death not as an end, but as a transition to eternal life.</p>
+      <video src="assets/egyptian.mp4" controls></video>
     </section>
 
-    <!-- 4 Pyramids -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Historical Architecture: The Pyramids</h2>
+      <h2>Historical Architecture: The Pyramids</h2>
       <img src="assets/pyramids.jpeg" class="exhibit-img">
-      <p>The How Pyramids Were Built exhibit showcases...</p>
-      <iframe src="https://www.youtube.com/embed/pOznETH5nGY" allowfullscreen></iframe>
+      <p>The How Pyramids Were Built exhibit showcases the engineering genius of the ancient world. Through scale models, stone-cutting demonstrations, and animated construction sequences, this section breaks down the mathematics, astronomy, and labor required to erect these monumental structures. Visitors can examine the tools and techniques used by ancient workers and learn how such precise alignments were achieved.</p>
+      <video src="assets/romans.mp4" controls></video>
     </section>
 
-    <!-- 5 Tudors: Elizabeth -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Tudors: Life and Death of Elizabeth</h2>
+      <h2>Tudors: Life and Death of Elizabeth</h2>
       <img src="assets/tudors1.jpg" class="exhibit-img">
-      <p>Step back in time to the Tudor era...</p>
-      <iframe src="https://www.youtube.com/embed/GjkWbF4PLA" allowfullscreen></iframe>
+      <p>Step into the world of Elizabethan England as you explore the life of Queen Elizabeth I. This exhibit includes portrait reproductions, clothing replicas, and accounts of key events that shaped her long reign. Discover how she navigated political intrigue, religious tension, and international diplomacy while forging a national identity that continues to influence Britain today.</p>
     </section>
 
-    <!-- 6 Henry VIII -->
     <section class="py-4 border-bottom">
-      <h3 class="mb-2">Beyond Henry</h3>
+      <h3>Beyond Henry</h3>
       <img src="assets/henry-new.jpeg.webp" class="exhibit-img">
-      <p>This section focuses on the formative years of Henry VIII...</p>
-      <iframe src="https://www.youtube.com/embed/7RjKG6gwmiE" allowfullscreen></iframe>
+      <p>Before becoming the infamous monarch, Henry VIII was a charismatic and highly educated young prince. This section examines his early life, his training in music and sport, and the hopes placed upon him as heir to the throne. Visitors can explore how these formative experiences shaped the ruler he would eventually become.</p>
     </section>
 
-    <!-- 7 Romans -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Romans</h2>
+      <h2>Romans</h2>
       <img src="assets/roman-warrior.jpeg.avif" class="exhibit-img">
-      <p>Experience the grandeur of the Roman Empire...</p>
-      <iframe src="https://www.youtube.com/embed/z3uvnwBMTdY" allowfullscreen></iframe>
+      <p>Experience the complex world of ancient Rome through displays of military gear, architectural fragments, mosaics, coins, and household objects. This exhibit reveals how Roman engineering influenced modern cities and how soldiers, citizens, and leaders shaped one of history’s most powerful empires.</p>
     </section>
 
-    <!-- 8 Enemies of Rome -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Enemies of Rome</h2>
+      <h2>Enemies of Rome</h2>
       <img src="assets/roman-enemy.jpeg.avif" class="exhibit-img">
-      <p>This exhibit examines Rome's adversaries...</p>
-      <iframe src="https://www.youtube.com/embed/MUFpC4oV9ig" allowfullscreen></iframe>
+      <p>This section explores the cultures and commanders who challenged Roman authority. From the Celts and Germanic tribes to Carthage under Hannibal, visitors can study weapons, armor, and battle strategies that made Rome’s adversaries formidable foes.</p>
     </section>
 
-    <!-- 9 Greeks -->
     <section class="py-4 border-bottom">
-      <h2 class="mb-3">Greeks</h2>
+      <h2>Greeks</h2>
       <img src="assets/greek-new.jpeg.avif" class="exhibit-img">
-      <p>Step into the world of ancient Greece...</p>
-      <iframe src="https://www.youtube.com/embed/gFRxmi4uCGo" allowfullscreen></iframe>
+      <p>This exhibit introduces the achievements of ancient Greece, from democratic governance to advances in art, warfare, architecture, and daily life. Visitors can explore recreated domestic scenes, temple structures, and artifacts that reveal how Greek innovations shaped Western civilization.</p>
     </section>
 
-    <!-- 10 Greek Philosophers -->
     <section class="py-4">
-      <h2 class="mb-3">The Great Minds of Greece</h2>
+      <h2>Great Minds of Greece</h2>
       <img src="assets/plato-new.jpeg.avif" class="exhibit-img">
-      <p>The Greek Philosophers exhibit celebrates the thinkers...</p>
-      <iframe src="https://www.youtube.com/embed/4ZwPOK2lrKE" allowfullscreen></iframe>
+      <p>Meet the thinkers who transformed the ancient world. This exhibit highlights the ideas of Socrates, Plato, Aristotle, and others through interactive displays, manuscripts, and recreated teaching spaces. Visitors can explore how their theories on ethics, logic, politics, and science continue to shape modern society.</p>
     </section>
 
   </main>
@@ -171,16 +142,16 @@
     <section>
       <div class="visitor-information">
         <h2>Visitor Information</h2>
-        <p>Open daily: 9am – 6pm</p>
-        <p>World of History Museum<br>18 Kingsbridge Row<br>Bloomsbury, London<br>United Kingdom</p>
+        <p>Open daily: 9am–6pm</p>
+        <p>World of History Museum<br>18 Kingsbridge Row<br>Bloomsbury, London</p>
       </div>
       <p>Email: info@worldofhistory.example | Phone: +44 (0)20 7123 4567</p>
     </section>
-    <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.twitter.com" target="_blank" rel="noopener">Twitter</a>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://www.twitter.com" target="_blank">Twitter</a>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
