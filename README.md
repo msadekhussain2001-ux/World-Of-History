@@ -264,8 +264,13 @@ git clone https://github.com/username/world-of-history-museum.git
 | **Responsive on tablet** | Elements stack neatly | Works correctly | ✔ Pass |
 | **Responsive on mobile** | Hamburger menu not required; layout vertical | Works correctly | ✔ Pass |
 | **Images load correctly** | All images display across pages | Works correctly | ✔ Pass |
-| **Internal links do not break** | All `.html` files connect | Works correctly | ✔ Pass |
+| **Internal links do not break** | All `.html` files connect | Works correctly | ✔ Pass | 
 
+### testing responsivness 
+[responsive testing ](assets/repsonsive-one.jpeg)  
+[responsive testing ](assets/responsive-two.jpeg)  
+
+* Used inspect element to test how the website would look across multiple devices. tested on i phone and android devices. 
 ----
 
 # Lighthouse Testing
