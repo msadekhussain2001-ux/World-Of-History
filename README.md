@@ -150,37 +150,37 @@ High‑quality curated images, including:
 # File Structure 
 World-Of-History/
 │
-├── index.html                    # Homepage
-├── exhibits.html                 # Exhibits page
-├── visits.html                   # Visit & booking page
+├── index.html
+├── exhibits.html
+├── visits.html
 │
-├── assets/                       # All static files (images, CSS, videos, screenshots)
-│   ├── style.css
-│   ├── exhibits.css
-│   ├── visits.css
-│   │
-│   ├── crystalpalace.jpg
-│   ├── victoriaandabdul.jpg
-│   ├── mummy.jpeg
-│   ├── pyramids.jpeg
-│   ├── tudors1.jpg
-│   ├── henry-new.jpeg.webp
-│   ├── roman-warrior.jpeg.avif
-│   ├── roman-enemy.jpeg.avif
-│   ├── greek-new.jpeg.avif
-│   ├── plato-new.jpeg.avif
-│   │
-│   ├── clip-one.mp4
-│   ├── egyptian.mp4
-│   ├── romans.mp4
-│   │
-│   ├── lighthouse.jpeg
-│   ├── multi-screen.jpeg.png
-│   ├── validator-index.jpeg
-│   ├── validator-visit.jpeg
-│   └── validator-exhibit.jpeg
+├── assets/
+│ ├── style.css
+│ ├── exhibits.css
+│ ├── visits.css
 │
-└── README.md                     # Project documentation
+│ ├── crystalpalace.jpg
+│ ├── victoriaandabdul.jpg
+│ ├── mummy.jpeg
+│ ├── pyramids.jpeg
+│ ├── tudors1.jpg
+│ ├── henry-new.jpeg.webp
+│ ├── roman-warrior.jpeg.avif
+│ ├── roman-enemy.jpeg.avif
+│ ├── greek-new.jpeg.avif
+│ ├── plato-new.jpeg.avif
+│
+│ ├── clip-one.mp4
+│ ├── egyptian.mp4
+│ ├── romans.mp4
+│
+│ ├── lighthouse.jpeg
+│ ├── multi-screen.jpeg.png
+│ ├── validator-index.jpeg
+│ ├── validator-visit.jpeg
+│ └── validator-exhibit.jpeg
+│
+└── README.md
 
 
 
@@ -275,9 +275,9 @@ Lighthouse was used via **Chrome DevTools** to test Performance, Accessibility, 
 Results summary:
 
 * **Performance:** Passed core metrics
-* **Accessibility:** Minor alt-text warnings
+* **Accessibility:** minor alt-text warnings
 * **Best Practices:** All checks passed
-* **SEO:** Fully optimized 
+* **SEO:** fully optimized 
 ![Lighthouse](assets/lighthouse.jpeg)
 
 Lighthouse greatly helped identify accessibility improvements.
